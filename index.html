@@ -9,27 +9,44 @@
     <link rel="stylesheet" href="./boxicons-2.0.7/css/boxicons.min.css">
     <link rel="stylesheet" href="col.css">
     <link rel="stylesheet" href="bike.css">
+    <link rel="stylesheet" href="Mobile_responsive.css">
 </head>
 <body>
 <!-- header -->
 <header>
-<a href="#" class="logo">
- <img src="./images/jawalogo.png" alt="">
-</a>
-<div class="main-menu-wrapper">
- <ul class="main-menu">
-   <li><a href="#">home</a></li>
-   <li><a href="#">book online</a></li>
-   <li><a href="#">motorcycles</a></li>
-   <li><a href="#">Blogs</a></li>
-   <li><a href="#">contact us</a></li>
- </ul>
-</div>
- <ul class="user-menu">
-  <li><a href="#"><i class='bx bx-user'></i></a></li>
-  <li><a href="#"><i class='bx bx-search'></i></a></li>
- </ul>
+  <!-- Logo -->
+  <a href="#" class="logo">
+    <img src="./images/jawalogo.png" alt="Logo" />
+  </a>
+
+  <!-- ☰ Menu icon (for mobile only) -->
+  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+  <!-- Main Menu -->
+  <div class="main-menu-wrapper">
+    <ul class="main-menu" id="mainMenu">
+      <li></li>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Book Online</a></li>
+      <li><a href="#">Motorcycles</a></li>
+      <li><a href="#">Blogs</a></li>
+      <li><a href="#">Contact Us</a></li>
+
+      <!-- Icons in menu (for mobile only) -->
+      <li class="menu-icons-mobile">
+        <a href="#"><i class='bx bx-user'></i></a>
+        <a href="#"><i class='bx bx-search'></i></a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Icons on big screen -->
+  <ul class="user-menu" id="userMenu">
+    <li><a href="#"><i class='bx bx-user'></i></a></li>
+    <li><a href="#"><i class='bx bx-search'></i></a></li>
+  </ul>
 </header>
+
 <!-- end header -->
 
 <!-- hero slide -->
@@ -304,6 +321,13 @@
 <!-- end footer -->
 <!-- bike js -->
 <script src="bike.js"></script>
+<script>
+  function toggleMenu() {
+    document.getElementById("mainMenu").classList.toggle("active");
+    document.getElementById("userMenu").classList.toggle("hide");
+  }
+</script>
+
 </body>
 </html>
 
